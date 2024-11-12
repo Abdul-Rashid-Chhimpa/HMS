@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon " href="./img/home.png">
+    <title>Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .containor {
+            /*border: 0.1px solid black;*/
+            height: 600px;
+            width: auto;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            background: url("./img/OBUZORLdEFO3HofPcHMa.jpeg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .box1 {
+            /*border: 0.1px solid black;*/
+            width: 150px;
+            height: 200px;
+            margin-top: 10%;
+            border-radius: 5px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0.9px 3px 6px rgb(64, 62, 62);
+        }
+        
+        .box1 img {
+            width: 140px;
+            height: 140px;
+            border-radius: 100%;
+            margin-left: 4px;
+            margin-top: 2px;
+        }
+        
+        .box1 a {
+            margin-left: 40px;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 5px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0.9px 3px 6px rgb(94, 88, 88);
+        }
+        
+        .box1 a:hover {
+            color: rgb(32, 96, 179);
+        }
+        
+        .box2 {
+            /*border: 0.1px solid black;*/
+            width: 150px;
+            height: 200px;
+            margin-top: 10%;
+            border-radius: 5px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0.9px 3px 6px rgb(64, 62, 62);
+        }
+        
+        .box2 img {
+            width: 140px;
+            height: 140px;
+            margin-left: 4px;
+            margin-top: 2px;
+        }
+        
+        .box2 a {
+            margin-left: 50px;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 5px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0.9px 3px 6px rgb(94, 88, 88);
+        }
+        
+        .box2 a:hover {
+            color: rgb(32, 96, 179);
+        }
+        
+        .box3 {
+            /*border: 0.1px solid black;*/
+            width: 150px;
+            height: 200px;
+            margin-top: 10%;
+            border-radius: 5px;
+            backdrop-filter: blur(30px);
+            box-shadow: 0.9px 3px 6px rgb(64, 62, 62);
+        }
+        
+        .box3 img {
+            width: 140px;
+            height: 140px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+        
+        .box3 a {
+            margin-left: 15px;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: 5px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0.9px 3px 6px rgb(94, 88, 88);
+        }
+        
+        .box3 a:hover {
+            color: rgb(32, 96, 179);
+        }
+        
+        .sidebar {
+            border: 0.1px solid black;
+            height: 600px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="containor">
+        <div class="box1">
+            <img src="./img/add-user.png" alt="">
+            <br>
+            <a href="http://localhost:5000/login">Admin</a>
+        </div>
+        <div class="box2">
+            <img src="./img/staff.png" alt="">
+            <br>
+            <a href="http://localhost:5000/status">Satff</a>
+        </div>
+        <div class="box3">
+            <img src="./img/registration-form.png" alt="">
+            <br>
+            <a href="http://localhost:5000/appointment">Registration</a>
+        </div>
+    </div>
+</body>
+
+</html>

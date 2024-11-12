@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .main-div {
+            margin-top: 5px;
+            /*border: 1px solid black;*/
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            height: auto;
+            width: auto;
+            overflow: hidden;
+        }
+        
+        .main-div .div1 {
+            margin-top: 5px;
+            /*border: 1px solid black;*/
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            height: auto;
+            width: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: url("./img/image.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .main-div .div1 .div2 {
+            margin-top: 2px;
+            /*border: 1px solid black;*/
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 3px;
+            height: auto;
+            width: auto;
+            backdrop-filter: blur(7px);
+            border-radius: 5px;
+        }
+        
+        .main-div .div1 .div3 {
+            margin-top: 2px;
+            /*border: 1px solid black;*/
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 3px;
+            height: auto;
+            width: auto;
+        }
+        
+        .div2 .box21 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-right: 1px;
+            height: auto;
+            width: auto;
+            margin-top: 1px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+        
+        .div2 .box21 h1 {
+            font-weight: 500;
+            color: #036494;
+        }
+        
+        .box23 h1 {
+            font-weight: 500;
+            color: #036494;
+        }
+        
+        .div2 .box22 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: auto;
+            width: auto;
+            margin-top: 1px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .div2 .box22 .box221 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box221 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box221 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div2 .box22 .box222 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box222 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box222 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div2 .box22 .box223 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box223 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box223 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div2 .box22 .box224 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box224 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box224 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div2 .box22 .box225 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box225 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box225 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div2 .box22 .box226 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div2 .box22 .box226 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        
+        .div2 .box22 .box226 input {
+            width: 15px;
+            height: 15px;
+            accent-color: green;
+        }
+        
+        .div3 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: auto;
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .box23 {
+            text-align: center;
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        /* Staff Duty box */
+        
+        .box3 {
+            /*border: 0.1px solid black;
+            margin-left: 1px;
+            margin-top: 2px;
+            margin-right: 1px;
+            margin-bottom: 2px; */
+            /*backdrop-filter: blur(7px);*/
+            border-radius: 5px;
+        }
+        
+        .box3 .box31 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            text-align: center;
+        }
+        
+        .box3 .box321 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        .box3 .box321 input {
+            width: auto;
+            padding: 10px 36px;
+            font-size: 10px;
+            /*border: 1px solid black;*/
+            border-radius: 3px;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0.9px 2px 3px rgb(104, 142, 209);
+            outline: none;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        
+        .box3 .box321 button {
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow, transform;
+            background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+            box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+            padding: 0 32px;
+            border-radius: 6px;
+            color: #fff;
+            height: 32px;
+            font-size: 18px;
+            text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+            transition: box-shadow 0.15s ease, transform 0.15s ease;
+            margin-left: 10px;
+            margin-top: 2px;
+            font-size: 14px;
+        }
+        
+        .box3 .box31 h1 {
+            font-weight: 500;
+            color: #4ac3ff;
+        }
+        
+        .div3 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: 45px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /*  box-shadow: 1px 2px 3px 2px rgb(107, 138, 190);*/
+        }
+        
+        .div3 .box331 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .div3 .box331 input {
+            accent-color: green;
+        }
+        
+        .div3 .box332 input {
+            accent-color: green;
+        }
+        
+        .div3 .box333 input {
+            accent-color: green;
+        }
+        
+        .div3 .box334 input {
+            accent-color: green;
+        }
+        
+        .div3 .box335 input {
+            accent-color: green;
+        }
+        
+        .div3 .box336 input {
+            accent-color: green;
+        }
+        
+        .div3 .box337 input {
+            accent-color: green;
+        }
+        
+        .div3 .box331 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box332 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box333 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box334 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box335 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box336 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box337 {
+            /*border: 0.1px solid black;*/
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 5px;
+            margin-bottom: 2px;
+            border-radius: 10px;
+        }
+        
+        .div3 .box331 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box332 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box333 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box334 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box335 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box336 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box337 img {
+            border-radius: 10px;
+            width: 100px;
+            height: 90px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        
+        .div3 .box331 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box332 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box333 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box334 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box335 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box336 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .div3 .box337 input {
+            width: 14px;
+            height: 14px;
+            margin-left: 110px;
+            margin-bottom: 5px;
+        }
+        
+        .box33 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .box33 .box331 h1 {
+            font-size: 30px;
+            margin-top: 5px;
+            margin-left: 5px;
+            font-weight: 100;
+            color: #5468FF;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .box3 .box33 .box332 label {
+            color: #5468FF;
+            margin-left: 10px;
+        }
+        
+        .box33 .box332 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .box33 .box332 input {
+            width: 15px;
+            height: 15px;
+            margin-top: 5px;
+        }
+        
+        .box33 .box333 {
+            /*border: 0.1px solid black;*/
+            margin-left: 1px;
+            margin-top: 1px;
+            margin-right: 1px;
+            margin-bottom: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .box33 .box333 button {
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow, transform;
+            background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+            box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+            padding: 0 32px;
+            border-radius: 6px;
+            color: #fff;
+            padding: 5px 20px;
+            text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+            transition: box-shadow 0.15s ease, transform 0.15s ease;
+            margin-left: 10px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        .box4 {
+            /*border: 0.1px solid black;*/
+            margin-right: 2px;
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-bottom: 2px;
+            height: 280px;
+            width: auto;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        
+        .box4 img {
+            width: 380px;
+            height: 250px;
+            margin-left: 100px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+            margin-right: 50px;
+            box-shadow: 0.9px 2px 3px rgb(104, 142, 209);
+            animation: move 20s linear infinite;
+        }
+        
+        @keyframes move {
+            0% {
+                transform: translateX(1200px);
+            }
+            100% {
+                transform: translateX(calc(-750px*2));
+            }
+        }
+        
+        .box5 {
+            /*border: 0.1px solid black;*/
+            margin-top: 2px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .box5 h1 {
+            font-size: 42px;
+            color: red;
+            margin: 5px;
+            margin-top: 50px;
+            text-shadow: 0.9px 2px 3px rgb(104, 142, 209);
+            animation: image 20s linear infinite;
+        }
+        
+        .box5 h1 span {
+            color: black;
+            text-shadow: 0.9px 2px 3px rgb(104, 142, 209);
+        }
+        
+        .box5 h2 {
+            font-size: 16px;
+            margin-top: 75px;
+            font-weight: 100;
+            animation: image 20s linear infinite;
+        }
+        
+        .box5 img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+            animation: image 20s linear infinite;
+        }
+        
+        @keyframes image {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(1250px);
+            }
+        }
+        
+        .box6 {
+            /*border: 0.1px solid black;*/
+            margin-top: 2px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            height: 470px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: url("./img/934c8571ada4723a826036429d632359.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .box6 .box61 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: 450px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            backdrop-filter: blur(20px);
+            border-radius: 5px;
+        }
+        
+        .box6 .box62 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: 400px;
+            backdrop-filter: blur(7px);
+        }
+        
+        .box6 .box62 .box621 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: auto;
+            text-align: center;
+        }
+        
+        .box6 .box62 .box621 h1 {
+            font-weight: 1000;
+            /*text-shadow: 0.9px 2px 3px rgb(164, 170, 180);*/
+            animation: emergency 0.5s linear infinite;
+        }
+        
+        @keyframes emergency {
+            0% {
+                color: red;
+            }
+            100% {
+                color: green;
+            }
+        }
+        
+        .box6 .box61 img {
+            margin-left: 5px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            margin-top: 2px;
+            width: 280px;
+            height: 200px;
+        }
+        
+        .box6 .box61 img:hover {
+            width: 290px;
+            height: 210px;
+            transition: 0.5s;
+            box-shadow: 1px 2px 2px 0.6px black;
+        }
+        
+        .box6 .box62 .box622 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            height: 408px;
+        }
+        
+        .box6 .box62 .box622 h2 {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            font-weight: 200;
+            color: #e8e9ef;
+        }
+        
+        .box6 .box62 .box622 h2 input {
+            margin-left: 10px;
+            width: 15px;
+            height: 15px;
+            accent-color: red;
+        }
+        
+        .box7 {
+            /*border: 0.1px solid black;*/
+            margin-top: 2px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+            height: 350px;
+        }
+        
+        .box7 img {
+            width: 310px;
+            height: 250px;
+            margin-top: 30px;
+            margin-left: 10px;
+            animation: img-move 20s linear infinite;
+        }
+        
+        @keyframes img-move {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(1250px);
+            }
+        }
+        
+        .box7 h2 {
+            font-weight: 400;
+            margin-left: 10px;
+            animation: img-heading 20s linear infinite;
+        }
+        
+        @keyframes img-heading {
+            0% {
+                transform: translateX(1250px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        /* popup */
+        
+        .popup {
+            /*border: 0.2px solid black;*/
+            height: auto;
+            width: 300px;
+            margin-left: 68%;
+            margin-bottom: 15px;
+            display: inline-block;
+            flex-direction: column;
+            box-shadow: 0.1px 2px 3px black;
+            border-radius: 5px;
+            background: url("./img/image.jpg");
+            background-position: center;
+            background-size: cover;
+            transform: scale(0);
+            visibility: hidden;
+            transition: 0.2s;
+        }
+        
+        .open-popup {
+            visibility: visible;
+            transform: scale(1.5);
+            transition: 0.5s;
+        }
+        
+        .popup .img img {
+            width: 60px;
+            height: 60px;
+            margin-left: 39%;
+            box-shadow: 0.1px 2px 3px black;
+            border-radius: 35px;
+            margin-top: 3px;
+            margin-bottom: 10px;
+        }
+        
+        .popup .btn button {
+            margin-left: 42%;
+            margin-top: 5px;
+            border: none;
+            box-shadow: 0.1px 2px 3px black;
+            padding: 5px 8px;
+            border-radius: 5px;
+            background-color: rgb(44, 143, 179);
+            color: white;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        
+        .popup .btn button:hover {
+            background-color: rgb(4, 103, 140);
+        }
+        
+        .popup .showPopup {
+            /*border: 0.1px solid black;*/
+            height: auto;
+        }
+        
+        .popup .showPopup h6 {
+            font-size: 14px;
+            margin-left: 10px;
+            font-weight: 100;
+            color: black;
+        }
+        
+        .popup .glass {
+            backdrop-filter: blur(10px);
+            height: auto;
+            width: 300px;
+            border-radius: 5px;
+            /*border: 0.1px solid black;*/
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main-div">
+
+        <div class="div1">
+
+            <div class="div2">
+                <div class="box21">
+                    <hr>
+                    <h1>Ward-1</h1>
+                    <hr>
+                </div>
+
+                <div class="box22">
+                    <div class="box221" id="box221">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed1">
+                    </div>
+                    <div class="box222" id="box222">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed2">
+                    </div>
+                    <div class="box223" id="box223">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed3">
+                    </div>
+                    <div class="box224" id="box224">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed4">
+                    </div>
+                    <div class="box225" id="box225">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed5">
+                    </div>
+                    <div class="box226" id="box226">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed6">
+                    </div>
+                </div>
+
+                <div class="popup" id="display-popup">
+
+                    <div class="glass">
+                        <div class="img" id="showImg">
+                            <!-- <img src="./img/check.png" alt=""> -->
+                        </div>
+                        <div class="showPopup" id="showPopup">
+                            <!-- <h6>Duty are register.Thank You</h6> -->
+                        </div>
+                        <div class="btn" id="popBtn">
+                            <!-- <button id="closePopup">Done</button> -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="box23">
+                    <hr>
+                    <h1>Ward-2</h1>
+                    <hr>
+                </div>
+
+                <div class="div3">
+                    <div class="box331" id="box331">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed11">
+                    </div>
+                    <div class="box332" id="box332">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed12">
+                    </div>
+                    <div class="box333" id="box333">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed13">
+                    </div>
+                    <div class="box334" id="box334">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed14">
+                    </div>
+                    <div class="box335" id="box335">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed15">
+                    </div>
+                    <div class="box336" id="box336">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed16">
+                    </div>
+                    <div class="box337" id="box337">
+                        <img src="./img/hospital-bed.png" alt="">
+                        <input type="checkbox" id="bed17">
+                    </div>
+                </div>
+            </div>
+
+            <div class="box3">
+                <div class="box31">
+                    <hr>
+                    <h1>Staff-Duty</h1>
+                    <hr>
+                </div>
+
+                <div class="box32">
+
+                    <div class="box321">
+                        <input type="text" placeholder="Enter a name..." id="inp">
+                        <button id="submit">Register</button>
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="box33" id="staffDuty">
+
+                    <div class="box331" id="head">
+                        <!--
+                        <h1>abdul rashid</h1> -->
+                    </div>
+
+                    <div class="box332" id="shift">
+                        <!--  <label for="">am</label>
+                        <input type="radio">
+                        <label for="">pm</label>
+                        <input type="radio">
+                        <label for="">W-1</label>
+                        <input type="radio">
+                        <label for="">W-2</label>
+                        <input type="radio"> -->
+                    </div>
+
+                    <div class="box333" id="button">
+                        <!--  <button>Edit</button>
+                        <button>Done</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+
+
+        <div class="box4">
+            <img src="./img/Chiranjivi-Swasth-Bima-Yojana-1200x675.jpg" alt="">
+            <img src="./img//822127-rncwljivpg-1479732146.jpg" alt="">
+            <img src="./img/03e1b7ad83d758d315d71944eb571a44.jpg" alt="">
+        </div>
+        <hr>
+
+        <div class="box5">
+            <img src="./img/img1.jpg" alt="">
+            <h1>L<span>ife</span></h1>
+            <h1>L<span>ine</span></h1>
+            <h1>H<span>ospital</span></h1>
+            <h2>Mundwa Circle, Nagaur(Raj) Mo. 8094344243 </h2>
+        </div>
+        <hr>
+        <div class="box6">
+            <div class="box61">
+                <img src="./img/lifeline-multispeciality-hospital-surat-lifeline-01.jpg" alt="">
+                <img src="./img/hospital inside.avif" alt="">
+                <img src="./img/operating_theatres.jpeg" alt="">
+                <img src="./img/depositphotos_38474377-stock-photo-operation-room.jpg" alt="">
+            </div>
+            <div class="box62">
+                <div class="box621">
+                    <h1>Emergency-Ward 24/7</h1>
+                    <hr>
+                </div>
+
+                <div class="box622">
+                    <h2>Dr.Ashok Jharwal(Surgen) <input type="radio"></h2>
+                    <h2>Dr.B.L.Bhutra(Neorologist) <input type="radio"></h2>
+                    <h2>Dr.Mohammed Shahid(Gastrology) <input type="radio"></h2>
+                    <h2>Dr.Mohammed Shoaib(Nurshing Officer) <input type="radio"></h2>
+                    <h2>Mohammed Rafiq(G.N.M male nurse) <input type="radio"></h2>
+                    <h2>Mohammed Sajid(G.N.M male nurse) <input type="radio"></h2>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="box7">
+            <img src="./img/mri2-1.webp" alt="">
+            <img src="./img/carmxray360-1.jpg" alt="">
+            <img src="./img/images.jfif" alt="">
+            <img src="./img/X-ray-system-400x267.jpg" alt="">
+            <br>
+            <hr>
+            <h2>M.R.I , C.T. Scan and X-Ray 3D and 5D, facilities are available 24/7 hour.</h2>
+            <hr>
+        </div>
+
+    </div>
+    <script src="./JS/status.js">
+    </script>
+</body>
+
+</html>

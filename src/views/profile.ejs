@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon " href="./img/person.png">
+    <title>Hospital 1 Details</title>
+    <style>
+        /* ===== Google Font Import - Poppins ===== */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.4s ease;
+            ;
+        }
+        /* ===== Colours ===== */
+        
+         :root {
+            --body-color: #E4E9F7;
+            --nav-color: #4070F4;
+            --side-nav: #010718;
+            --text-color: #FFF;
+            --search-bar: #F2F2F2;
+            --search-text: #010718;
+        }
+        
+        body {
+            height: 100vh;
+            /*background-color: var(--body-color);*/
+        }
+        
+        body.dark {
+            --body-color: #18191A;
+            --nav-color: #242526;
+            --side-nav: #242526;
+            --text-color: #CCC;
+            --search-bar: #242526;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+            background-color: var(--nav-color);
+            z-index: 100;
+        }
+        
+        body.dark nav {
+            border: 1px solid #393838;
+        }
+        
+        nav .nav-bar {
+            position: relative;
+            height: 100%;
+            max-width: 1000px;
+            width: 100%;
+            background-color: var(--nav-color);
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        nav .nav-bar .sidebarOpen {
+            color: var(--text-color);
+            font-size: 25px;
+            padding: 5px;
+            cursor: pointer;
+            display: none;
+        }
+        
+        nav .nav-bar .logo a {
+            font-size: 25px;
+            font-weight: 500;
+            color: var(--text-color);
+            text-decoration: none;
+        }
+        
+        .menu .logo-toggle {
+            display: none;
+        }
+        
+        .nav-bar .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-bar .nav-links li {
+            margin: 0 5px;
+            list-style: none;
+        }
+        
+        .nav-links li a {
+            position: relative;
+            font-size: 17px;
+            font-weight: 400;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 10px;
+        }
+        
+        .nav-links li a::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background-color: var(--text-color);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links li:hover a::before {
+            opacity: 1;
+        }
+        
+        .nav-bar .darkLight-searchBox {
+            display: flex;
+            align-items: center;
+        }
+        
+        .darkLight-searchBox .dark-light,
+        .darkLight-searchBox .searchToggle {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+        }
+        
+        .dark-light i,
+        .searchToggle i {
+            position: absolute;
+            color: var(--text-color);
+            font-size: 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dark-light i.sun {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .dark-light.active i.sun {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .dark-light.active i.moon {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .searchToggle i.cancel {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .searchToggle.active i.cancel {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .searchToggle.active i.search {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .searchBox {
+            position: relative;
+        }
+        
+        .searchBox .search-field {
+            position: absolute;
+            bottom: -85px;
+            right: 5px;
+            height: 50px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            background-color: var(--nav-color);
+            padding: 3px;
+            border-radius: 6px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+        
+        .searchToggle.active~.search-field {
+            bottom: -74px;
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .search-field::before {
+            content: '';
+            position: absolute;
+            right: 14px;
+            top: -4px;
+            height: 12px;
+            width: 12px;
+            background-color: var(--nav-color);
+            transform: rotate(-45deg);
+            z-index: -1;
+        }
+        
+        .search-field input {
+            height: 100%;
+            width: 100%;
+            padding: 0 45px 0 15px;
+            outline: none;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--search-text);
+            background-color: var(--search-bar);
+        }
+        
+        body.dark .search-field input {
+            color: var(--text-color);
+        }
+        
+        .search-field i {
+            position: absolute;
+            color: var(--nav-color);
+            right: 15px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        body.dark .search-field i {
+            color: var(--text-color);
+        }
+        
+        @media (max-width: 790px) {
+            nav .nav-bar .sidebarOpen {
+                display: block;
+            }
+            .menu {
+                position: fixed;
+                height: 100%;
+                width: 320px;
+                left: -100%;
+                top: 0;
+                padding: 20px;
+                background-color: var(--side-nav);
+                z-index: 100;
+                transition: all 0.4s ease;
+            }
+            nav.active .menu {
+                left: -0%;
+            }
+            nav.active .nav-bar .navLogo a {
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            .menu .logo-toggle {
+                display: block;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .logo-toggle .siderbarClose {
+                color: var(--text-color);
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .nav-bar .nav-links {
+                flex-direction: column;
+                padding-top: 30px;
+            }
+            .nav-links li a {
+                display: block;
+                margin-top: 20px;
+            }
+        }
+        
+        .box {
+            /*border: 0.1px solid black;*/
+            height: 500px;
+            width: auto;
+            margin-top: 100px;
+        }
+        
+        .box1 {
+            /*border: 0.1px solid black;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            height: 470px;
+            /*background-color: var(--nav-color);*/
+        }
+        
+        .box1 .box11 {
+            /*border: 0.1px solid black;*/
+            margin-top: 100px;
+            margin-left: 3px;
+            margin-right: 3px;
+            display: block;
+        }
+        
+        .box1 .box12 {
+            /*border: 0.1px solid black;*/
+            margin-top: 3px;
+            margin-left: 3px;
+            margin-right: 3px;
+            background: url("./img/dr3.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .box11 span {
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            font-style: italic;
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            /*color: var(--nav-color);*/
+            color: dimgray;
+            margin-left: 50px;
+            text-decoration: underline;
+        }
+        
+        .box11 h1 {
+            font-size: 32px;
+            margin-left: 50px;
+            color: #4070F4;
+        }
+        
+        .box11 h2 {
+            font-size: 22px;
+            margin-left: 50px;
+            color: #5468FF;
+        }
+        
+        .box11 p {
+            font-size: 14px;
+            margin-left: 50px;
+            color: rgb(145, 135, 135);
+        }
+        
+        .box11 button {
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow, transform;
+            background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+            box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+            padding: 0 32px;
+            border-radius: 6px;
+            color: #fff;
+            height: 48px;
+            font-size: 18px;
+            text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+            transition: box-shadow 0.15s ease, transform 0.15s ease;
+            margin-left: 50px;
+        }
+        
+        .box11 button :hover {
+            box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+            transform: translateY(-2px);
+        }
+        
+        .box11 button:active {
+            box-shadow: inset 0px 3px 7px #3c4fe0;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen'></i>
+            <span class="logo navLogo"><a href="#">Dr.Ashok Jharwal</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">CodingLab</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="http://localhost:5000/">Home</a></li>
+                    <li><a href="http://localhost:5000/facilities">About</a></li>
+                    <li><a href="http://localhost:5000/appointment">Appointment</a></li>
+                    <li><a href="http://localhost:5000/status">Status</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="box" id="b">
+        <div class="box1">
+            <div class="box11">
+                <span>Diagnosis</span>
+
+                <h1>Personal care for your healthy living</h1>
+
+                <h2>Dr.Ashok Jharwal</h2>
+
+                <p>Every single one of us will have our life interrupted, whether it's by the ripcord of a diagnosis or some other kind of heartbreak or trauma that brings us to the floor. We need to find a way to live in the in-between place, managing whatever
+                    body and mind we currently have.</p>
+                <br>
+                <button type="submit" class="submit-btn" onclick="visit()">Read more ></button>
+            </div>
+            <div class="box12"></div>
+        </div>
+    </div>
+    <hr>
+    <script>
+        function visit() {
+            location.assign("http://localhost:5000/facilities");
+        }
+    </script>
+</body>
+
+</html>

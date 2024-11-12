@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients Information</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script>
+        (function() {
+            emailjs.init({
+                publicKey: "AJmXzFOXP4Af4zihn",
+            });
+        })();
+    </script>
+    <style>
+        body {
+            background: url("img/360_F_260040863_fYxB1SnrzgJ9AOkcT0hoe7IEFtsPiHAD.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .box {
+            /*border: 0.1px solid black;*/
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 35%;
+            margin-top: 3%;
+            height: 500px;
+            backdrop-filter: blur(12px);
+            border-radius: 5px;
+            box-shadow: 0.2px 0.8px 0.5px 0.7px rgb(68, 100, 152);
+        }
+        
+        .box1 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            text-align: center;
+        }
+        
+        span {
+            font-size: 34px;
+            color: mediumblue;
+        }
+        
+        .box2 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+        .box2 form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-group {
+            margin-left: 5px;
+            margin-top: 5px;
+            margin-right: 5px;
+            /*border: 0.1px solid black;*/
+            height: 60px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            color: #09378e;
+        }
+        
+        .form-group input {
+            padding: 8px 50px;
+            font-size: 10px;
+            /* border: 1px solid black; */
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0.9px 2px 3px rgb(94, 88, 88);
+            outline: none;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        
+        .form-group input:hover {
+            border: 0.1px solid #472dbb;
+        }
+        
+        .form-group input::placeholder {
+            color: #472dbb;
+            font-size: 12px;
+        }
+        
+        button {
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            will-change: box-shadow, transform;
+            background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+            box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+            padding: 0 32px;
+            border-radius: 6px;
+            color: #fff;
+            height: 48px;
+            font-size: 18px;
+            text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+            transition: box-shadow 0.15s ease, transform 0.15s ease;
+        }
+        
+        button:hover {
+            box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            box-shadow: inset 0px 3px 7px #3c4fe0;
+            transform: translateY(2px);
+        }
+        
+        .submit-btn:hover {
+            background-color: #4565a0;
+        }
+        
+        input[type="checkbox"] {
+            width: 15px;
+            border: none;
+            border-radius: 30px;
+        }
+        
+        .form-group1 {
+            /*border: 0.1px solid black;*/
+            margin-top: 3px;
+        }
+        
+        .form-group1 input {
+            width: 13px;
+            height: 13px;
+        }
+        
+        .form-group1 label {
+            font-weight: lighter;
+            font-size: 18px;
+            color: #09378e;
+        }
+        
+        .popup {
+            /*border: 0.1px solid black;*/
+            height: 40px;
+            width: 300px;
+            margin-left: 38%;
+            backdrop-filter: blur(50px);
+            display: flex;
+            flex-direction: row;
+            background: linear-gradient(135deg, #849bc6, #A7BFE8);
+            border-radius: 5px;
+            box-shadow: 1px 2px 0.9px rgb(100, 99, 99);
+            transform: scale(0);
+            visibility: hidden;
+            transition: 3s;
+        }
+        
+        .open-popup {
+            transform: scale(1.1);
+            visibility: visible;
+            transition: 2s;
+        }
+        
+        .popup img {
+            width: 20px;
+            height: 20px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        
+        .popup label {
+            margin-top: 10px;
+            margin-left: 10px;
+            color: rgb(255, 255, 255);
+            font-weight: 100;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="popup" id="display-popup">
+        <img src="./img/check.png" alt=""> <label for=""> Appointment is register successfully.</label>
+    </div>
+    <div class="box">
+        <div class="box1">
+            <span>Patient Information</span>
+            <hr>
+        </div>
+
+        <div class="box2">
+            <form action="/appointment" method="post">
+                <div class="form-group">
+                    <label for="name">Firstname</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Enter your firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Lastname</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter your lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Age</label>
+                    <input type="text" id="age" name="age" placeholder="Enter your age" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Date</label>
+                    <input type="date" id="date" name="date" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group1">
+                    <input type="checkbox" name="" value=""> <label for="password">First time visit this website?</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="btn" class="submit-btn">Register</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script src="./JS/email.js">
+    </script>
+</body>
+
+</html>

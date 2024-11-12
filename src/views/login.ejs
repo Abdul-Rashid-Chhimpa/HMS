@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon " href="./img/person.png">
+    <title>Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url("./img/background\ img.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .containor {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0.6px 2px 3px rgb(67, 64, 64);
+            outline: none;
+            font-size: 12px;
+        }
+        
+        .login {
+            /*border: 0.1px solid black;*/
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            border: none;
+            border-radius: 3px;
+            box-shadow: 0.9px 2px 3px rgb(94, 88, 88);
+            outline: none;
+            font-size: 12px;
+        }
+        
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #472dbb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0.9px 2px 3px rgb(94, 88, 88);
+        }
+        
+        .form-group input::placeholder {
+            color: #472dbb;
+            font-size: 10px;
+        }
+        
+        .form-group input:hover {
+            border: 0.1px solid #472dbb;
+        }
+        
+        .submit-btn:hover {
+            background-color: #4565a0;
+        }
+        
+        p {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        
+        p a {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .box {
+            /*border: 0.1px solid black;*/
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            height: 35px;
+            box-shadow: 0.1px 2px 3px black;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .box:hover {
+            background-color: #81a7ed;
+            color: white;
+            font-weight: 300;
+        }
+        
+        .box img {
+            cursor: pointer;
+            width: 27px;
+            height: 27px;
+            margin-top: 4px;
+            margin-left: 40px;
+        }
+        
+        .box h1 {
+            font-size: 16px;
+            margin-top: 8px;
+            font-weight: 600;
+        }
+        
+        hr {
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        .form-group1 {
+            /*border: 0.1px solid black;*/
+            margin-top: 1px;
+            margin-left: 1px;
+        }
+        
+        .form-group1 input {
+            width: 13px;
+            height: 13px;
+            margin-top: 2;
+        }
+        
+        .form-group1 span {
+            margin-left: 2px;
+            font-size: 12px;
+            font-weight: 200;
+        }
+        
+        .box1 {
+            /* border: 0.1px solid black;*/
+            display: flex;
+            flex-direction: row;
+            border-radius: 0px 0px 5px 5px;
+            background: transparent;
+            overflow: hidden;
+        }
+        
+        .box1 img {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .box1 h1 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 2px;
+            text-shadow: 1px 0.6px 4px rgb(172, 168, 160);
+        }
+        
+        .box1 h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 2px;
+            margin-left: 5px;
+            text-shadow: 1px 0.6px 4px rgb(172, 168, 160);
+        }
+        /* Popup */
+        
+        .popup {
+            /*border: 0.1px solid black;*/
+            height: 25px;
+            width: 250px;
+            display: flex;
+            margin-left: 5px;
+            flex-direction: row;
+            background: linear-gradient(135deg, #849bc6, #A7BFE8);
+            border-radius: 5px;
+            box-shadow: 1px 2px 0.9px rgb(100, 99, 99);
+            transform: scale(0);
+            visibility: hidden;
+            transition: 0.1s;
+            margin-top: 10px;
+        }
+        
+        .open-popup {
+            transform: scale(1.1);
+            visibility: visible;
+            transition: 0.6s;
+        }
+        
+        .popup img {
+            width: 15px;
+            height: 15px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+        
+        .popup h2 {
+            margin-top: 5px;
+            margin-left: 10px;
+            color: rgb(8, 8, 8);
+            font-weight: 100;
+            font-size: 14px;
+        }
+        
+        span label {
+            /*border: 0.1px solid black;*/
+            margin-left: 45%;
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="containor">
+        <div class="login">
+            <img src="./img/account.png" alt="">
+        </div>
+        <br>
+
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="name">Username</label>
+                <input type="email" id="username" name="username" placeholder="Enter your email/username" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="password" required>
+            </div>
+            <div class="form-group1">
+                <input type="checkbox" id="checkbox"><span>Show Password
+                </span>
+            </div>
+            <button type="submit" id="log" class="submit-btn">Login</button>
+            <br>
+
+
+        </form>
+
+        <span><label for="">Or</label>
+        </span>
+
+        <div class="box">
+            <img src="./img/search.png" alt=" ">
+            <h1>Sign with in google</h1>
+        </div>
+        <hr>
+        <p>Don't have an account? <a href="/signup ">signup</a> <br><a href="/ ">Home page</a><br><a href="/register ">New registration</a></p>
+        <hr>
+        <div class="popup" id="display-popup">
+            <img src="./img/check.png" alt="">
+            <h2> Login is successfully.</h2>
+        </div>
+    </div>
+    <script src="./JS/login.js"></script>
+</body>
+
+</html>

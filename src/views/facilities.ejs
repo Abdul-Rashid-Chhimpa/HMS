@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilities</title>
+    <style>
+        .box {
+            /*border: 0.1px solid black;*/
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 100px;
+            width: auto;
+            height: auto;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 75px;
+            background: #2980b9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            max-width: 90%;
+            background: #2980b9;
+            margin: auto;
+        }
+        
+        nav .navbar .logo a {
+            color: #fff;
+            font-size: 27px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        nav .navbar .logo a img {
+            width: 150px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        
+        nav .navbar .menu {
+            display: flex;
+        }
+        
+        .navbar .menu li {
+            list-style: none;
+            margin: 0 15px;
+        }
+        
+        .navbar .menu li a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        
+        section {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            color: #96c7e8;
+            font-size: 70px;
+        }
+        
+        .button a {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #fff;
+            background: #2980b9;
+            padding: 7px 12px;
+            font-size: 18px;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.15);
+        }
+        
+        .img {
+            display: grid;
+            grid-template-columns: 1fr;
+            /*border: 0.1px solid black;*/
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-bottom: 2px;
+        }
+        
+        .img1 {
+            /*border: 0.1px solid black;*/
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            height: 450px;
+            margin-bottom: 2px;
+        }
+        
+        .img1 img {
+            width: 1300px;
+            height: 450px;
+        }
+        
+        .img2 {
+            /*border: 0.1px solid black;*/
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            height: 300px;
+            margin-bottom: 2px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            height: 400px;
+        }
+        
+        .img2 .img21 {
+            background: url("./img/International-Patient-Facility.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .img2 .img22 {
+            background: url("./img/hospital inside.avif");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .img3 {
+            /*border: 0.1px solid black;*/
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            height: 300px;
+            margin-bottom: 2px;
+        }
+        
+        .img3 img {
+            width: 1300px;
+            height: 300px;
+        }
+        
+        .img4 {
+            /*border: 0.1px solid black;*/
+            margin-top: 10px;
+            margin-left: 2px;
+            margin-right: 2px;
+            height: 820px;
+            margin-bottom: 2px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .img4 .img41 img {
+            width: 650px;
+            height: 800px;
+        }
+        
+        .img4 .img42 p {
+            /*border: 0.1px solid black;*/
+            width: 300px;
+            margin-left: 100px;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 100;
+            color: #74abd5;
+            height: auto;
+        }
+        
+        .img4 .img42 p span {
+            color: rgb(27, 32, 162);
+            font-size: large;
+        }
+        
+        .img5 {
+            /*border: 0.1px solid black;*/
+            margin-top: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+            height: 300px;
+            margin-bottom: 2px;
+        }
+        
+        @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+        * {
+            font-family: Open Sans;
+        }
+        
+        section {
+            width: 100%;
+            display: inline-block;
+            background: #333;
+            height: 50vh;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        
+        .footer-distributed {
+            background: #666;
+            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px sans-serif;
+            padding: 55px 50px;
+        }
+        
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-center,
+        .footer-distributed .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* Footer left */
+        
+        .footer-distributed .footer-left {
+            width: 40%;
+        }
+        /* The company logo */
+        
+        .footer-distributed h3 {
+            color: #ffffff;
+            font: normal 36px 'Open Sans', cursive;
+            margin: 0;
+        }
+        
+        .footer-distributed h3 span {
+            color: lightseagreen;
+        }
+        /* Footer links */
+        
+        .footer-distributed .footer-links {
+            color: #ffffff;
+            margin: 20px 0 12px;
+            padding: 0;
+        }
+        
+        .footer-distributed .footer-links a {
+            display: inline-block;
+            line-height: 1.8;
+            font-weight: 400;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .footer-distributed .footer-company-name {
+            color: #222;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+        /* Footer Center */
+        
+        .footer-distributed .footer-center {
+            width: 35%;
+        }
+        
+        .footer-distributed .footer-center i {
+            background-color: #33383b;
+            color: #ffffff;
+            font-size: 25px;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            margin: 10px 15px;
+            vertical-align: middle;
+        }
+        
+        .footer-distributed .footer-center i.fa-envelope {
+            font-size: 17px;
+            line-height: 38px;
+        }
+        
+        .footer-distributed .footer-center p {
+            display: inline-block;
+            color: #ffffff;
+            font-weight: 400;
+            vertical-align: middle;
+            margin: 0;
+        }
+        
+        .footer-distributed .footer-center p span {
+            display: block;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 2;
+        }
+        
+        .footer-distributed .footer-center p a {
+            color: lightseagreen;
+            text-decoration: none;
+            ;
+        }
+        
+        .footer-distributed .footer-links a:before {
+            content: "|";
+            font-weight: 300;
+            font-size: 20px;
+            left: 0;
+            color: #fff;
+            display: inline-block;
+            padding-right: 5px;
+        }
+        
+        .footer-distributed .footer-links .link-1:before {
+            content: none;
+        }
+        /* Footer Right */
+        
+        .footer-distributed .footer-right {
+            width: 20%;
+        }
+        
+        .footer-distributed .footer-company-about {
+            line-height: 20px;
+            color: #92999f;
+            font-size: 13px;
+            font-weight: normal;
+            margin: 0;
+        }
+        
+        .footer-distributed .footer-company-about span {
+            display: block;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .footer-distributed .footer-icons {
+            margin-top: 25px;
+        }
+        
+        .footer-distributed .footer-icons a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            background-color: #33383b;
+            border-radius: 2px;
+            font-size: 20px;
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+        }
+        /* If you don't want the footer to be responsive, remove these media queries */
+        
+        @media (max-width: 880px) {
+            .footer-distributed {
+                font: bold 14px sans-serif;
+            }
+            .footer-distributed .footer-left,
+            .footer-distributed .footer-center,
+            .footer-distributed .footer-right {
+                display: block;
+                width: 100%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .footer-distributed .footer-center i {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#"><img src="./img/lifeline logo.jpg" alt=""></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Category">Category</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Feedback">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="box">
+        <div class="heading">
+
+        </div>
+        <div class="img">
+            <div class="img1">
+                <img src="./img/dr team.jpg" alt="">
+            </div>
+            <div class="img2">
+                <div class="img21">
+                    <!-- <img src="./img/hospital inside.avif" alt=""> -->
+                </div>
+                <div class="img22">
+                    <!-- <img src="./img/International-Patient-Facility.jpg" alt=""> -->
+                </div>
+            </div>
+            <div class="img3">
+                <img src="./img/lifeline logo.jpg" alt="">
+            </div>
+            <div class="img4">
+                <div class="img41">
+                    <img src="./img/img1.jpg" alt="">
+                </div>
+                <div class="img42">
+                    <p>
+                        The Lifeline Hospital and Research Center is a 100 bedded Specialty Hospital for Neuroscience, Critical Care, Trauma & Support Medical Services in Uttar Pradesh, was established in September 2009. Lifeline Hospital and Research Center is a Private Corporate
+                        Hospital registered under CMO (Registration No. 177). We health care services for the Population, Elite & and Common people alike of Eastern Uttar Pradesh-INDIA. Lifeline Hospital and Research Center provides integrated health
+                        care services with world class diagnostic equipments, medical facilities and latest technology in Neurosurgery, Neuro-Intensive Care, Neuro-Radiology, Emergency & Trauma and Anesthesiology. The Lifeline Hospital and Research Center
+                        also has support departments in General Surgery, Orthopedic Surgery, Maxillo-Facial Surgery, Psychiatry, Medicine Department, Dialysis Unit, Physiotherapy, Critical Care Department, Dental Treatments and Psychotherapy etc. People
+                        of Eastern part of Uttar Pradesh have largely been benefited after establishment of this hospital.
+                        <br>
+
+                        <span>Founded by eminent Dr. Ashok Jharwal</span>
+                    </p>
+                </div>
+            </div>
+            <div class="img5">
+                <footer class="footer-distributed">
+
+                    <div class="footer-left">
+
+                        <h3>Life Line<span>Hospital</span></h3>
+
+                        <p class="footer-links">
+                            <a href="#" class="link-1">Home</a>
+
+                            <a href="#">Log-in</a>
+
+                            <a href="#">Signup</a>
+
+                            <a href="#">About</a>
+
+                            <a href="#">Faculties</a>
+
+                            <a href="#">Contact</a>
+                        </p>
+
+                        <p class="footer-company-name">Life line hospital © 2015</p>
+                    </div>
+
+                    <div class="footer-center">
+
+                        <div>
+                            <i class="fa fa-map-marker"></i>
+                            <p><span>444 Dr Ashok Jharwal</span> Mundwa Circle, Nagaur</p>
+                        </div>
+
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p>+91-1234-4567-00</p>
+                        </div>
+
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p><a href="mailto:support@company.com">support@company.com</a></p>
+                        </div>
+
+                    </div>
+
+                    <div class="footer-right">
+
+                        <p class="footer-company-about">
+                            <span>About the hospital</span> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+                        </p>
+
+                        <div class="footer-icons">
+
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+
+                        </div>
+
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
